@@ -54,7 +54,7 @@ octofit-tracker/
 - Install the Python packages below only for our OctoFit Tracker project
 
 ```text
-Django==4.1.7
+Django==4.1
 djangorestframework==3.14.0
 django-allauth==0.51.0
 django-cors-headers==4.5.0
