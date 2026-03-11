@@ -2,3 +2,17 @@
 We are thrilled that you are here and we hope you are excited to explore the capabilities of Copilot!
 🏋🏽🔥💪🏼🎧 As the gym teacher of Mergington High School you have been tasked with building a fitness app for your students.
 📃 GitHub Copilot documentation: https://docs.github.com/en/copilot
+
+💡 Codespaces tips to avoid exceeding your free usage:
+   • Always STOP your Codespace when not actively using it (do NOT just close the browser tab).
+     → In GitHub.com go to: github.com/codespaces → find your codespace → ⋯ menu → "Stop codespace"
+   • Use the smallest machine type (2-core) when creating a new Codespace.
+   • Free plan includes 120 core-hours/month. A 2-core machine uses 2 core-hours per hour of use.
+   • Monitor your usage at: https://github.com/settings/billing/summary
+
+🔄 To restart the exercise from scratch:
+   1. Go to https://github.com/settings/billing/summary to check/increase your Codespaces budget.
+   2. Delete any old Codespaces at https://github.com/codespaces to free up quota.
+   3. Create a new Codespace on the exercise repository using a 2-core machine.
+   4. The post-create script will set up MongoDB, Python, and Node.js automatically.
+   5. Follow the exercise instructions linked from the repository README.

@@ -35,11 +35,15 @@
     "portAttributes": {
       "3000": { // React port attributes
       "label": "octofit-tracker",
-      "requireLocalPort": true
+      "onAutoForward": "notify"
       },
       "8000": { // Django port attributes
       "label": "octofit-api",
-      "requireLocalPort": true
+      "onAutoForward": "notify"
+      },
+      "27017": { // MongoDB port attributes
+      "label": "octofit-mongodb",
+      "onAutoForward": "silent"
       }
     }
 }
