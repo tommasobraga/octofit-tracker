@@ -15,8 +15,18 @@ We are thrilled that you are here and we hope you are excited to explore the cap
    • Monitor your usage at: https://github.com/settings/billing/summary
 
 ⚠️  If you see "out of monthly free usage or exceeded your budget for Codespaces":
-   1. Go to https://github.com/settings/billing/summary and increase your Codespaces spending limit.
-   2. Or wait for your quota to reset at the start of the next calendar month.
+   This can happen even on a Copilot Pro plan (180 core-hours/month, not unlimited).
+
+   ✅ Quick Fix — do this right now:
+   1. Increase your Codespaces spending limit:
+      → https://github.com/settings/billing/spending_limit
+      Find "Codespaces" → "Edit limit" → set to $5 → "Update limit"
+      (You are only charged for usage beyond your free quota, ~$0.18/hr on 2-core)
+   2. (Optional) Delete old Codespaces to free up resources:
+      → https://github.com/codespaces  → ⋯ → "Delete"
+   3. Create a new 2-core Codespace on this repository and wait for setup to finish.
+
+   🔁 Or wait: your included quota resets at the start of each calendar month.
 
 🔄 To restart the exercise from scratch:
    1. Go to https://github.com/settings/billing/summary to check/increase your Codespaces budget.
