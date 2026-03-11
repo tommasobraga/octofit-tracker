@@ -2,12 +2,13 @@
     "name": "OctoFit Tracker App codespace",
     "image": "mcr.microsoft.com/devcontainers/base:jammy",
     "features": {
-        "ghcr.io/devcontainers/features/docker-in-docker:2": {},
         "ghcr.io/devcontainers/features/github-cli:1": {},
         "ghcr.io/devcontainers/features/node:1": {
-        "version": "lts",
-        "pnpmVersion": "latest",
-        "nvmVersion": "latest"
+        "version": "lts"
+        },
+        "ghcr.io/devcontainers/features/python:1": {
+        "version": "os-provided",
+        "installTools": false
         }
     },
     "postCreateCommand": "sudo chmod +x ./.devcontainer/post_create.sh && ./.devcontainer/post_create.sh",

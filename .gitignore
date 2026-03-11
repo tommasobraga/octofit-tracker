@@ -1,24 +1,26 @@
 .DS_Store
 
-# Virtual Environment
-venv
+# Virtual Environments (match at any directory level)
+venv/
+.venv/
+env/
+octofit-tracker/backend/venv/
 
-# octofit tracker app
-# octfit-tracker
-
-# React node_modules
-node_modules
-/.pnp
+# React node_modules and package manager artifacts (match at any directory level)
+node_modules/
+.pnp
 .pnp.js
+.yarn/
 
-# testing
-/coverage
+# Testing output (match at any directory level)
+coverage/
 
-# production
-/build
+# Production build output (match at any directory level)
+build/
+dist/
 
 # misc
-.DS_Store
+.env
 .env.local
 .env.development.local
 .env.test.local
@@ -30,4 +32,11 @@ yarn-error.log*
 
 # Python files
 *.pyc
+*.pyo
 __pycache__/
+*.egg-info/
+.eggs/
+*.sqlite3
+
+# MongoDB local data directory (if used inside the repo)
+data/
