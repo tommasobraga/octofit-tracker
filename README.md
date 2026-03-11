@@ -14,15 +14,30 @@ Remember, it's self-paced so feel free to take a break! ☕️
 
 ## ⚠️ Codespaces Budget / Free Usage Exceeded
 
-If you see **"You are out of monthly free usage or have exceeded your budget for Codespaces"**, follow these steps:
+If you see **"You are out of monthly free usage or have exceeded your budget for Codespaces"**, this can happen even if you have a **GitHub Copilot Pro** subscription. Here's why and what to do:
 
-### Option 1 – Increase your Codespaces budget (recommended)
+> **Important:** A GitHub Copilot Pro subscription does **not** provide unlimited Codespaces usage. It increases your included monthly quota, but that quota can still be exhausted.
+>
+> | Plan | Included Codespaces quota |
+> |---|---|
+> | GitHub Free | 120 core-hours / month |
+> | **GitHub Copilot Pro** | **180 core-hours / month** |
+>
+> With a 2-core machine, 180 core-hours = ~90 hours of active Codespace use per month.
+
+### Option 1 – Increase your Codespaces spending limit (recommended)
 1. Go to **[GitHub Billing Settings](https://github.com/settings/billing/summary)**.
-2. Under **Codespaces**, increase your spending limit (you can set it to a small amount, e.g. $5, or keep it at $0 to use only free quota).
-3. Free plan includes **120 core-hours/month** (120 ÷ 2 cores = 60 hours of active use with a 2-core machine).
+2. Under **Codespaces**, increase your spending limit (e.g. set it to $5 to allow a small amount of paid usage beyond your free quota).
+3. Once the limit is raised, you can start a new Codespace immediately.
 
 ### Option 2 – Wait for the monthly reset
-Your free quota resets at the start of each calendar month. Simply wait and try again then.
+Your included quota resets at the start of each calendar month. Simply wait and try again then.
+
+### Option 3 – Reduce future Codespaces usage
+To get the most out of your included quota:
+- **Always stop your Codespace** when you take a break — do **not** just close the browser tab.
+  → Go to <https://github.com/codespaces> → find your Codespace → **⋯** → **Stop codespace**
+- Use the smallest machine type (**2-core**) when creating a new Codespace.
 
 ---
 

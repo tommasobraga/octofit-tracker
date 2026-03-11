@@ -3,12 +3,20 @@ We are thrilled that you are here and we hope you are excited to explore the cap
 🏋🏽🔥💪🏼🎧 As the gym teacher of Mergington High School you have been tasked with building a fitness app for your students.
 📃 GitHub Copilot documentation: https://docs.github.com/en/copilot
 
-💡 Codespaces tips to avoid exceeding your free usage:
+💡 Codespaces tips to avoid exceeding your monthly quota:
    • Always STOP your Codespace when not actively using it (do NOT just close the browser tab).
      → In GitHub.com go to: github.com/codespaces → find your codespace → ⋯ menu → "Stop codespace"
    • Use the smallest machine type (2-core) when creating a new Codespace.
-   • Free plan includes 120 core-hours/month. A 2-core machine uses 2 core-hours per hour of use.
+   • Included monthly Codespaces quota (a 2-core machine uses 2 core-hours per hour of active use):
+       GitHub Free plan:        120 core-hours/month (~60 hours on a 2-core machine)
+       GitHub Copilot Pro plan: 180 core-hours/month (~90 hours on a 2-core machine)
+   ⚠️  Having a Copilot Pro subscription does NOT mean unlimited Codespaces — you can still exhaust
+       your 180 core-hour quota. If you hit the limit, increase your spending limit (see below).
    • Monitor your usage at: https://github.com/settings/billing/summary
+
+⚠️  If you see "out of monthly free usage or exceeded your budget for Codespaces":
+   1. Go to https://github.com/settings/billing/summary and increase your Codespaces spending limit.
+   2. Or wait for your quota to reset at the start of the next calendar month.
 
 🔄 To restart the exercise from scratch:
    1. Go to https://github.com/settings/billing/summary to check/increase your Codespaces budget.
