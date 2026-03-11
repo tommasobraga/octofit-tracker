@@ -3,12 +3,30 @@ We are thrilled that you are here and we hope you are excited to explore the cap
 🏋🏽🔥💪🏼🎧 As the gym teacher of Mergington High School you have been tasked with building a fitness app for your students.
 📃 GitHub Copilot documentation: https://docs.github.com/en/copilot
 
-💡 Codespaces tips to avoid exceeding your free usage:
+💡 Codespaces tips to avoid exceeding your monthly quota:
    • Always STOP your Codespace when not actively using it (do NOT just close the browser tab).
      → In GitHub.com go to: github.com/codespaces → find your codespace → ⋯ menu → "Stop codespace"
    • Use the smallest machine type (2-core) when creating a new Codespace.
-   • Free plan includes 120 core-hours/month. A 2-core machine uses 2 core-hours per hour of use.
+   • Included monthly Codespaces quota (a 2-core machine uses 2 core-hours per hour of active use):
+       GitHub Free plan:        120 core-hours/month (~60 hours on a 2-core machine)
+       GitHub Copilot Pro plan: 180 core-hours/month (~90 hours on a 2-core machine)
+   ⚠️  Having a Copilot Pro subscription does NOT mean unlimited Codespaces — you can still exhaust
+       your 180 core-hour quota. If you hit the limit, increase your spending limit (see below).
    • Monitor your usage at: https://github.com/settings/billing/summary
+
+⚠️  If you see "out of monthly free usage or exceeded your budget for Codespaces":
+   This can happen even on a Copilot Pro plan (180 core-hours/month, not unlimited).
+
+   ✅ Quick Fix — do this right now:
+   1. Increase your Codespaces spending limit:
+      → https://github.com/settings/billing/spending_limit
+      Find "Codespaces" → "Edit limit" → set to $5 → "Update limit"
+      (You are only charged for usage beyond your free quota, ~$0.18/hr on 2-core)
+   2. (Optional) Delete old Codespaces to free up resources:
+      → https://github.com/codespaces  → ⋯ → "Delete"
+   3. Create a new 2-core Codespace on this repository and wait for setup to finish.
+
+   🔁 Or wait: your included quota resets at the start of each calendar month.
 
 🔄 To restart the exercise from scratch:
    1. Go to https://github.com/settings/billing/summary to check/increase your Codespaces budget.

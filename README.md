@@ -14,15 +14,43 @@ Remember, it's self-paced so feel free to take a break! ☕️
 
 ## ⚠️ Codespaces Budget / Free Usage Exceeded
 
-If you see **"You are out of monthly free usage or have exceeded your budget for Codespaces"**, follow these steps:
+If you see **"You are out of monthly free usage or have exceeded your budget for Codespaces"**, follow the steps below — **this can happen even if you have a GitHub Copilot Pro subscription**.
 
-### Option 1 – Increase your Codespaces budget (recommended)
-1. Go to **[GitHub Billing Settings](https://github.com/settings/billing/summary)**.
-2. Under **Codespaces**, increase your spending limit (you can set it to a small amount, e.g. $5, or keep it at $0 to use only free quota).
-3. Free plan includes **120 core-hours/month** (120 ÷ 2 cores = 60 hours of active use with a 2-core machine).
+> **Why does this happen with Copilot Pro?**
+> A Copilot Pro subscription does **not** provide unlimited Codespaces. It increases your included monthly quota, but that quota can still run out.
+>
+> | Plan | Included Codespaces quota (2-core machine) |
+> |---|---|
+> | GitHub Free | 120 core-hours / month (~60 hours of active use) |
+> | **GitHub Copilot Pro** | **180 core-hours / month (~90 hours of active use)** |
 
-### Option 2 – Wait for the monthly reset
-Your free quota resets at the start of each calendar month. Simply wait and try again then.
+### ✅ Quick Fix — do this right now to get unblocked
+
+**Step 1 — Increase your Codespaces spending limit**
+1. Open **[https://github.com/settings/billing/spending_limit](https://github.com/settings/billing/spending_limit)** (sign in if prompted).
+2. Find the **Codespaces** row and click **Edit limit**.
+3. Set the monthly spending limit to any amount above **$0** (for example **$5**). This covers any usage beyond your free quota at GitHub's standard rate (~$0.18/hour for a 2-core machine). You will only be charged for what you actually use over your included quota.
+4. Click **Update limit** to save.
+
+**Step 2 — Clean up old Codespaces (optional but recommended)**
+1. Go to **[https://github.com/codespaces](https://github.com/codespaces)**.
+2. Find any old or stopped Codespaces for this repository.
+3. Click **⋯** next to each one → **Delete** to free up resources.
+
+**Step 3 — Start a new Codespace**
+1. On this repository page, click **Code** → **Codespaces** → **Create codespace on main** (or the relevant exercise branch).
+2. When prompted for machine type, choose **2-core** to minimize usage cost.
+3. Wait for the post-create script to finish — MongoDB, Python, and Node.js will be set up automatically.
+4. You're ready! Follow the exercise using the **Go to Exercise** button at the top of this page.
+
+### 🔁 Option 2 – Wait for the monthly quota reset
+If you prefer not to add a spending limit, your included quota resets at the **start of each calendar month**. Simply wait and try again then.
+
+### 💡 Prevent this from happening again
+- **Always stop your Codespace** when taking a break — do **not** just close the browser tab.
+  → <https://github.com/codespaces> → find your Codespace → **⋯** → **Stop codespace**
+- Always use the **2-core** machine type when creating a Codespace.
+- Monitor your remaining quota at **[https://github.com/settings/billing/summary](https://github.com/settings/billing/summary)**.
 
 ---
 
