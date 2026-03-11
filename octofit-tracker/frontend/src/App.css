@@ -1,0 +1,167 @@
+/* OctoFit Tracker - Purple/Dark Theme */
+
+.App {
+  min-height: 100vh;
+  background-color: #1a0a2e;
+}
+
+/* Navbar */
+.navbar-octofit {
+  background: linear-gradient(135deg, #2d0a5e 0%, #4b0082 100%);
+  box-shadow: 0 2px 10px rgba(75, 0, 130, 0.5);
+  padding: 0.75rem 1.5rem;
+}
+
+.navbar-octofit .navbar-brand {
+  color: #e0d7f5 !important;
+  font-weight: 700;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar-octofit .navbar-brand img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.navbar-octofit .nav-link {
+  color: #c9b8f0 !important;
+  font-weight: 500;
+  padding: 0.5rem 1rem !important;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.navbar-octofit .nav-link:hover,
+.navbar-octofit .nav-link.active {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.navbar-octofit .navbar-toggler {
+  border-color: rgba(201, 184, 240, 0.5);
+}
+
+.navbar-octofit .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28201, 184, 240, 0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Main content */
+.main-content {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Page headings */
+.page-title {
+  color: #c9b8f0;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #4b0082;
+  padding-bottom: 0.5rem;
+}
+
+/* Tables */
+.octofit-table {
+  background-color: #2a1045;
+  color: #e0d7f5;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(75, 0, 130, 0.3);
+}
+
+.octofit-table thead th {
+  background-color: #4b0082;
+  color: #ffffff;
+  font-weight: 600;
+  border: none;
+  padding: 1rem;
+}
+
+.octofit-table tbody tr {
+  border-color: rgba(75, 0, 130, 0.3);
+  transition: background-color 0.2s ease;
+}
+
+.octofit-table tbody tr:hover {
+  background-color: rgba(75, 0, 130, 0.2);
+}
+
+.octofit-table tbody td {
+  color: #e0d7f5;
+  padding: 0.85rem 1rem;
+  vertical-align: middle;
+}
+
+/* Loading spinner */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+/* Home page */
+.home-hero {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.home-hero h1 {
+  color: #c9b8f0;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.home-hero p {
+  color: #a89cc8;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.feature-card {
+  background-color: #2a1045;
+  border: 1px solid rgba(75, 0, 130, 0.4);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(75, 0, 130, 0.4);
+}
+
+.feature-card h5 {
+  color: #c9b8f0;
+  font-weight: 600;
+}
+
+.feature-card p {
+  color: #a89cc8;
+  margin: 0;
+}
+
+/* Rank badge */
+.rank-badge {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.rank-1 { background-color: #ffd700; color: #1a0a2e; }
+.rank-2 { background-color: #c0c0c0; color: #1a0a2e; }
+.rank-3 { background-color: #cd7f32; color: #1a0a2e; }
+.rank-other { background-color: #4b0082; color: #ffffff; }

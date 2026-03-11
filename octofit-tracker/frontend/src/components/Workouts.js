@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 
-function Teams() {
-  const [teams, setTeams] = useState([]);
+function Workouts() {
+  const [workouts, setWorkouts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     const apiUrl = process.env.REACT_APP_CODESPACE_NAME
-      ? `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev/api/teams/`
-      : 'http://localhost:8000/api/teams/';
+      ? `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev/api/workouts/`
+      : 'http://localhost:8000/api/workouts/';
 
     fetch(apiUrl)
       .then((response) => {
@@ -18,12 +18,12 @@ function Teams() {
         return response.json();
       })
       .then((data) => {
-        console.log('Teams data:', data);
-        setTeams(Array.isArray(data) ? data : data.results || []);
+        console.log('Workouts data:', data);
+        setWorkouts(Array.isArray(data) ? data : data.results || []);
         setLoading(false);
       })
       .catch((err) => {
-        console.error('Error fetching teams:', err);
+        console.error('Error fetching workouts:', err);
         setError(err.message);
         setLoading(false);
       });
@@ -40,37 +40,32 @@ function Teams() {
   }
 
   if (error) {
-    return <div className="alert alert-danger">Error loading teams: {error}</div>;
+    return <div className="alert alert-danger">Error loading workouts: {error}</div>;
   }
-
-  const formatMembers = (team) => {
-    if (Array.isArray(team.members)) {
-      return team.members.map(m => m.name || m.username || String(m)).join(', ') || '—';
-    }
-    return team.members || '—';
-  };
 
   return (
     <div>
-      <h2 className="page-title">👥 Teams</h2>
+      <h2 className="page-title">💪 Workouts</h2>
       <div className="table-responsive">
         <table className="table octofit-table">
           <thead>
             <tr>
-              <th>Team Name</th>
-              <th>Members</th>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Duration</th>
             </tr>
           </thead>
           <tbody>
-            {teams.length === 0 ? (
+            {workouts.length === 0 ? (
               <tr>
-                <td colSpan="2" className="text-center">No teams found.</td>
+                <td colSpan="3" className="text-center">No workouts found.</td>
               </tr>
             ) : (
-              teams.map((team, index) => (
-                <tr key={team._id || team.id || index}>
-                  <td>{team.name || '—'}</td>
-                  <td>{formatMembers(team)}</td>
+              workouts.map((workout, index) => (
+                <tr key={workout._id || workout.id || index}>
+                  <td>{workout.name || '—'}</td>
+                  <td>{workout.description || '—'}</td>
+                  <td>{workout.duration ? `${workout.duration} min` : '—'}</td>
                 </tr>
               ))
             )}
@@ -81,4 +76,4 @@ function Teams() {
   );
 }
 
-export default Teams;
+export default Workouts;
