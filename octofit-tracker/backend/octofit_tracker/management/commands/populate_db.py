@@ -43,12 +43,10 @@ class Command(BaseCommand):
             self.stdout.write(f'  Created user: {name}')
 
         self.stdout.write('Creating teams...')
-        team_marvel = Team.objects.create(name='Team Marvel')
-        team_marvel.members.set(marvel_users)
+        Team.objects.create(name='Team Marvel')
         self.stdout.write('  Created Team Marvel')
 
-        team_dc = Team.objects.create(name='Team DC')
-        team_dc.members.set(dc_users)
+        Team.objects.create(name='Team DC')
         self.stdout.write('  Created Team DC')
 
         self.stdout.write('Creating activities...')
