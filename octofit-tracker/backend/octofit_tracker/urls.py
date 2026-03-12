@@ -1,6 +1,7 @@
 import os
 from django.contrib import admin
 from django.urls import path, include
+from django.views.generic import RedirectView
 from rest_framework.routers import DefaultRouter
 from .views import (
     api_root,
@@ -26,6 +27,7 @@ router.register(r'workouts', WorkoutViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/', api_root, name='api-root'),
     path('api/', include(router.urls)),
-    path('', api_root, name='api-root'),
+    path('', RedirectView.as_view(url='/api/', permanent=False)),
 ]

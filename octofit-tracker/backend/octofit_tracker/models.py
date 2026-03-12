@@ -1,7 +1,9 @@
 from djongo import models
+from bson import ObjectId
 
 
 class OctoFitUser(models.Model):
+    id = models.ObjectIdField(primary_key=True, default=ObjectId, editable=False)
     name = models.CharField(max_length=100)
     email = models.EmailField(unique=True)
     password = models.CharField(max_length=255)
@@ -14,8 +16,9 @@ class OctoFitUser(models.Model):
 
 
 class Team(models.Model):
+    id = models.ObjectIdField(primary_key=True, default=ObjectId, editable=False)
     name = models.CharField(max_length=100)
-    members = models.ManyToManyField(OctoFitUser, blank=True, related_name='teams')
+    members = models.ArrayReferenceField(to=OctoFitUser, on_delete=models.CASCADE, blank=True, related_name='teams')
 
     class Meta:
         db_table = 'teams'
@@ -25,6 +28,7 @@ class Team(models.Model):
 
 
 class Activity(models.Model):
+    id = models.ObjectIdField(primary_key=True, default=ObjectId, editable=False)
     user = models.ForeignKey(OctoFitUser, on_delete=models.CASCADE, related_name='activities')
     activity_type = models.CharField(max_length=100)
     duration = models.FloatField(help_text='Duration in minutes')
@@ -38,6 +42,7 @@ class Activity(models.Model):
 
 
 class Leaderboard(models.Model):
+    id = models.ObjectIdField(primary_key=True, default=ObjectId, editable=False)
     user = models.ForeignKey(OctoFitUser, on_delete=models.CASCADE, related_name='leaderboard_entries')
     score = models.IntegerField(default=0)
 
@@ -49,6 +54,7 @@ class Leaderboard(models.Model):
 
 
 class Workout(models.Model):
+    id = models.ObjectIdField(primary_key=True, default=ObjectId, editable=False)
     name = models.CharField(max_length=100)
     description = models.TextField()
     duration = models.FloatField(help_text='Duration in minutes')

@@ -5,23 +5,23 @@
       "name": "Launch Django Backend",
       "type": "debugpy",
       "request": "launch",
-      "program": "${workspaceFolder}/backend/manage.py",
+      "program": "${workspaceFolder}/octofit-tracker/backend/manage.py",
       "args": ["runserver", "0.0.0.0:8000"],
       "django": true,
       "justMyCode": true,
-      "python": "${workspaceFolder}/backend/venv/bin/python",
+      "python": "/usr/local/python/current/bin/python",
       "env": {
-        "PYTHONPATH": "${workspaceFolder}/backend",
-        "VIRTUAL_ENV": "${workspaceFolder}/backend/venv",
-        "PATH": "${workspaceFolder}/backend/venv/bin:${env:PATH}"
+        "PYTHONPATH": "${workspaceFolder}/octofit-tracker/backend",
+        "VIRTUAL_ENV": "${workspaceFolder}/octofit-tracker/backend/venv",
+        "PATH": "${workspaceFolder}/octofit-tracker/backend/venv/bin:${env:PATH}"
       }
     },
     {
       "name": "Launch React Frontend",
       "type": "node",
       "request": "launch",
-      "program": "${workspaceFolder}/frontend/node_modules/react-scripts/scripts/start.js",
-      "cwd": "${workspaceFolder}/frontend",
+      "program": "${workspaceFolder}/octofit-tracker/frontend/node_modules/react-scripts/scripts/start.js",
+      "cwd": "${workspaceFolder}/octofit-tracker/frontend",
       "runtimeExecutable": "npm",
       "runtimeArgs": ["start"],
       "env": {
