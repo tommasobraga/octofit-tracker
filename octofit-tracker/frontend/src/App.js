@@ -37,19 +37,21 @@ function Home() {
 
       <div className="row g-3 justify-content-center mt-1">
         {[
-          { icon: '👤', title: 'User Profiles', desc: 'Manage your fitness profile and personal goals.' },
-          { icon: '🏃', title: 'Activity Logging', desc: 'Log runs, swims, cycling, and more.' },
-          { icon: '👥', title: 'Team Management', desc: 'Create teams and challenge your friends.' },
-          { icon: '🏆', title: 'Leaderboard', desc: 'See who is leading the fitness race.' },
-          { icon: '💪', title: 'Workouts', desc: 'Discover personalized workout suggestions.' },
+          { icon: '👤', title: 'User Profiles', desc: 'Manage your fitness profile and personal goals.', to: '/users' },
+          { icon: '🏃', title: 'Activity Logging', desc: 'Log runs, swims, cycling, and more.', to: '/activities' },
+          { icon: '👥', title: 'Team Management', desc: 'Create teams and challenge your friends.', to: '/teams' },
+          { icon: '🏆', title: 'Leaderboard', desc: 'See who is leading the fitness race.', to: '/leaderboard' },
+          { icon: '💪', title: 'Workouts', desc: 'Discover personalized workout suggestions.', to: '/workouts' },
         ].map((f) => (
           <div key={f.title} className="col-12 col-md-6 col-lg-4">
-            <div className="card feature-card h-100">
-              <div className="card-body">
-                <h2 className="h5 card-title">{f.icon} {f.title}</h2>
-                <p className="card-text mb-0">{f.desc}</p>
+            <NavLink className="feature-card-link" to={f.to} aria-label={`Open ${f.title}`}>
+              <div className="card feature-card h-100">
+                <div className="card-body">
+                  <h2 className="h5 card-title">{f.icon} {f.title}</h2>
+                  <p className="card-text mb-0">{f.desc}</p>
+                </div>
               </div>
-            </div>
+            </NavLink>
           </div>
         ))}
       </div>
